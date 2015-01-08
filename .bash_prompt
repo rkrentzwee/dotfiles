@@ -33,7 +33,7 @@ prompt_git() {
         status+='?';
       fi;
 
-      Check for stashed files.
+      # Check for stashed files.
       if $(git rev-parse --verify refs/stash &>/dev/null); then
         status+='S';
       fi;
@@ -48,16 +48,16 @@ prompt_git() {
     local remote_pattern="# Your branch is (.*) of"
     if [[ ${git_status} =~ ${remote_pattern} ]]; then
       if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-        remote="${blue}↑"
+        remote="${blue}↑";
       else
-        remote="${blue}↓"
+        remote="${blue}↓";
       fi
     else
-      remote=""
+      remote="";
     fi
     local diverge_pattern="# Your branch and (.*) have diverged"
     if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-      remote="${blue}↕"
+      remote="${blue}↕";
     fi
 
     # Get the short symbolic ref.
