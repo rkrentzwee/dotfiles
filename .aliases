@@ -33,7 +33,7 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
-export LS_COLORS='ExGxBxDxCxEgEdxbxgxcxd'
+export LS_COLORS='cxGxBxDxCxEgEdxbxgxcxd'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '

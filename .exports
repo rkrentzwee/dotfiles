@@ -23,3 +23,9 @@ export GREP_OPTIONS="--color=auto"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# THEOS
+export THEOS=/usr/theos
+export THEOS_DEVICE_IP=10.0.1.5 THEOS_DEVICE_PORT=22
+export SDKVERSION=7.1
+PATH="$THEOS/bin:$PATH"
