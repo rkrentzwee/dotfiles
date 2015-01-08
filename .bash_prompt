@@ -8,6 +8,9 @@ prompt_git() {
   local color="${green}";
   local status='';
   local branchName='';
+  local gitStatus='';
+  local remote='';
+  local remotePattern='';
 
   # Check if the current directory is in a Git repository.
   if [ $(git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == '0' ]; then
@@ -41,23 +44,25 @@ prompt_git() {
     fi;
 
     # Capture the output of the "git status" command.
-    local git_status="$(git status 2> /dev/null)"
+    gitStatus="$(git status 2> /dev/null)";
 
     # Set arrow icon based on status against remote.
-    local remote="";
-    local remote_pattern="# Your branch is (.*) of"
-    if [[ ${git_status} =~ ${remote_pattern} ]]; then
+    remote="!!!#{gitStatus}";
+    remotePattern=".*Your branch is (.*) of.*"
+    if [[ ${gitStatus} =~ ${remotePattern} ]]; then
+      remote="Y";
       if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-        remote="${blue}↑";
+        remote="↑";
       else
-        remote="${blue}↓";
+        remote="↓";
       fi
     else
       remote="";
     fi
-    local diverge_pattern="# Your branch and (.*) have diverged"
-    if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-      remote="${blue}↕";
+    
+    remotePattern="# Your branch and (.*) have diverged"
+    if [[ ${gitStatus} =~ ${remotePattern} ]]; then
+      remote="↕";
     fi
 
     # Get the short symbolic ref.
@@ -65,11 +70,12 @@ prompt_git() {
     # Otherwise, just give up.
     branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
       git rev-parse --short HEAD 2> /dev/null || \
-      echo '(unknown)')";
+      echo -n '(unknown)')";
 
-    [ -n "${status}" ] && status=" ${red}[${status}]";
+    [ -n "${status}" ] && status=" ${darkred}[${status}]";
+    [ -n "${remote}" ] && remote="${blue}$remote";
 
-    echo -e -n " ${green}${remote}${color}(${branchName})${status}";
+    echo -e -n " ${color}(${branchName})${remote}${status}";
   else
     return;
   fi;
@@ -86,6 +92,7 @@ if tput setaf 1 &> /dev/null; then
   green=$(tput setaf 64);
   orange=$(tput setaf 166);
   purple=$(tput setaf 125);
+  darkred=$(tput setaf 88);
   red=$(tput setaf 124);
   violet=$(tput setaf 61);
   white=$(tput setaf 15);
