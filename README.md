@@ -2,6 +2,23 @@
 
 ![Screenshot of my shell prompt](http://i.imgur.com/EkEtphC.png)
 
+## Current ToDos
+* .osx
+	* .osx closes Terminal when finished
+	* .osx blows away all apps in Dock, would be useful to re-setup at end with installed/common apps
+	* Add user homedir to sidebar of Finder
+	* Add Path button to top of Finder
+	* Set desktop images to rotate by default
+* Terminal default colors are a little screwed up
+	* Background is white
+	* Default text color is black
+	* Few other colors are not that great (like during brew installation)
+* Sublime does not get setup as default text editor from terminal
+* Github for Mac does not properly install
+* RVM does not properly install default gems or switch to stable RVM ruby install
+* Some pages are not necessary (since you need an Apple ID to install XCode to get Git)
+* Finish up by forking to local repo and replacing?
+
 ## Installation
 
 ### The simple way...
@@ -14,6 +31,7 @@ sh ./.osx
 sh ./brew.sh
 sh ./setup-converge.sh
 ```
+(beware, the final step of setup-converge.sh installs GCC, which takes 1-2hrs to install)
 
 To update in the future, `cd` into your local `dotfiles` repository and then:
 
