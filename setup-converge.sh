@@ -25,6 +25,8 @@ then
 	echo "Github for Mac found, skipping"
 else
 	echo "Github for Mac not installed, installing"
+  mkdir -p ~/Downloads/apps
+  mkdir -p ~/Downloads/apps/github-mac
 	wget -O ~/Downloads/apps/github-mac/github-mac-latest.zip https://central.github.com/mac/latest -x
   sudo unzip ~/Downloads/apps/github-mac/github-mac-latest.zip -d /Applications/
   echo "Github for Mac not installed!"
