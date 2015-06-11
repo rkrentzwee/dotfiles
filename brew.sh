@@ -5,7 +5,7 @@ if [ -d ~/.cask ]
 then
 	echo "Brew found, skipping"
 else
-	echo "Brewe not installed, installing"
+	echo "Brew not installed, installing"
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	echo "Brew installed!"
 fi
