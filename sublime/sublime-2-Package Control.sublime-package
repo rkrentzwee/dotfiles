@@ -1,0 +1,12 @@
+{
+  "installed_packages":
+  [
+    "BracketHighlighter",
+    "Detect Syntax",
+    "ColorHighlighter",
+    "Git Gutter",
+    "JavaScriptNext",
+    "SCSS",
+    "SideBarEnhancements"
+  ]
+}
