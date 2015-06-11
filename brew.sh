@@ -45,6 +45,7 @@ brew install openssl
 
 # Install other useful binaries.
 brew install git
+brew install hub
 brew install appledoc
 brew install mobile-shell
 brew install automake
