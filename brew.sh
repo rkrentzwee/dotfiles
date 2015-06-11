@@ -51,7 +51,7 @@ brew install automake
 brew install sqlite
 
 # Various languages & compilers
-brew install gcc
+# GCC is installed at the end of the Converge setup to save time
 brew install python
 
 # Remove outdated versions from the cellar.
