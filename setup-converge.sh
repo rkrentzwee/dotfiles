@@ -50,5 +50,25 @@ else
   \curl -sSL https://get.rvm.io | bash -s stable --ruby --with-default-gems="cocoapods"
 fi
 
+# Setup Sublime (v2)
+if [ -f ~/bin/subl ]
+then
+  echo "Sublime convenience symlink exists, skipping setup..."
+else
+  echo "Setting up Sublime 2 convenience symlink, use 'subl' to open files with sublime"
+  ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+fi
+
+ST=~/.config/sublime-text-2
+if [ -f $ST/Installed\ Packages/Package\ Control.sublime-package ]
+then
+  echo "Sublime package list exists, skipping..."
+else
+  echo "Setting up default Sublime package list"
+  mkdir -p $ST/{Installed\ Packages,Packages/User}
+  cp sublime\sublime-2-Package\ Control.sublime-package $ST/Installed\ Packages/Package\ Control.sublime-package
+fi
+
+echo "Done! Installing GCC as a last step. This will take a few hours..."
 # This is out of order w/ the other brew installs because it takes forever
 brew install gcc
