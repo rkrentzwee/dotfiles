@@ -24,6 +24,9 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 
+# Install GPG (for use with installing RVM)
+brew install gpg
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
