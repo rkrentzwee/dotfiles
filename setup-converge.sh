@@ -16,6 +16,9 @@ mkdir -p ~/others-repositories
 # Ask for admin privileges upfront
 sudo -v
 
+# Install Alcatraz Package Manager for XCode
+curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+
 # Install Github for Mac
 if [ -d /Applications/Github.app ]
 then
