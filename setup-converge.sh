@@ -1,6 +1,6 @@
 # Open Chrome to all the relevant download windows
 open -a Google\ Chrome https://appleid.apple.com/account
-open -a Google\ Chrome https://slack.com/signin
+open -a Google\ Chrome https://converge-industries.slack.com/
 open -a Google\ Chrome http://www.sublimetext.com/
 open -a Google\ Chrome https://packagecontrol.io/installation#st2
 open -a Google\ Chrome https://www.dropbox.com/download?plat=mac
