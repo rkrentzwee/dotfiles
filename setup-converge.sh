@@ -2,6 +2,7 @@
 open -a Google\ Chrome https://appleid.apple.com/account
 open -a Google\ Chrome https://slack.com/signin
 open -a Google\ Chrome http://www.sublimetext.com/
+open -a Google\ Chrome https://packagecontrol.io/installation#st2
 open -a Google\ Chrome https://www.dropbox.com/download?plat=mac
 open -a Google\ Chrome https://agilebits.com/onepassword/mac
 open -a Google\ Chrome http://www.alfredapp.com/#download
@@ -59,14 +60,16 @@ else
   ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 fi
 
-ST=~/.config/sublime-text-2
-if [ -f $ST/Installed\ Packages/Package\ Control.sublime-package ]
+ST=~/Library/Application\ Support/Sublime\ Text\ 2
+if [ -d $ST/Packages/Package\ Control ]
 then
   echo "Sublime package list exists, skipping..."
 else
-  echo "Setting up default Sublime package list"
+  echo "Setting up default Sublime packages"
   mkdir -p $ST/{Installed\ Packages,Packages/User}
-  cp sublime\sublime-2-Package\ Control.sublime-package $ST/Installed\ Packages/Package\ Control.sublime-package
+  curl https://packagecontrol.io/Package%20Control.sublime-package \
+  > "$ST"/Installed\ Packages/Package\ Control.sublime-package
+  cp sublime/sublime-2-Package\ Control.sublime-settings "$ST"/Packages/User/Package\ Control.sublime-settings
 fi
 
 echo "Done! Installing GCC as a last step. This will take a few hours..."
