@@ -2,9 +2,6 @@
 # Make Sublime the default editor
 export EDITOR="subl -w"
 
-# Make vim the default editor.
-# export EDITOR='vim';
-
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
@@ -20,15 +17,6 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
-
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# THEOS
-export THEOS=/usr/theos
-export THEOS_DEVICE_IP=10.0.1.5 THEOS_DEVICE_PORT=22
-export SDKVERSION=7.1
-PATH="$THEOS/bin:$PATH"
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
