@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+# Install Brew
+if [ -d ~/.cask ]
+then
+	echo "Brew found, skipping"
+else
+	echo "Brewe not installed, installing"
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	echo "Brew installed!"
+fi
+
 # Install command-line tools using Homebrew.
 
 # Ask for the administrator password upfront.
