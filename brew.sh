@@ -54,6 +54,8 @@ brew install sqlite
 # Various languages & compilers
 # GCC is installed at the end of the Converge setup to save time
 brew install python
+pip install --upgrade pip setuptools
+brew linkapps python
 
 # Remove outdated versions from the cellar.
 brew cleanup
