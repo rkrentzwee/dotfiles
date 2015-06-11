@@ -10,6 +10,9 @@ open -a Google\ Chrome https://help.github.com/articles/generating-ssh-keys/
 open -a Google\ Chrome https://github.com/fpillet/NSLogger/releases
 open -a Google\ Chrome http://www.skype.com/en/download-skype/skype-for-mac/downloading/
 
+mkdir -p ~/repositories
+mkdir -p ~/others-repositories
+
 # Ask for admin privileges upfront
 sudo -v
 
