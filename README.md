@@ -6,6 +6,7 @@
 * .osx
 	* .osx closes Terminal when finished
 	* .osx blows away all apps in Dock, would be useful to re-setup at end with installed/common apps
+	* Setup System Prefs -> Security -> Lock `immediately` on sleep/screen saver
 	* Add user homedir to sidebar of Finder
 	* Add Path button to top of Finder
 	* Set desktop images to rotate by default
