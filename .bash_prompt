@@ -1,3 +1,8 @@
+# Explanation of the problem with line-wrapping issues:
+# The problem was that Bash has espace sequences \[ and \] to tell Bash not to count a range of characters for 
+# line wrapping purposes, but these sequences are only evalued when assigning to the PS1, PS2, or PS4 variables--
+# so the prompt_git function needed to be evaluated each time before being appended to PS1, instead of being evaluated in PS1.
+
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM='gnome-256color';
 elif infocmp xterm-256color >/dev/null 2>&1; then
