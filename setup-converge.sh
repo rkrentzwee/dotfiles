@@ -57,6 +57,19 @@ fi
 echo "Forking dotfiles repo to your github account so you can personalize in the future..."
 hub fork
 
+# Setup default Dock icons
+add_app_to_dock(){
+	defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$1.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+}
+add_app_to_dock 'Google Chrome'
+add_app_to_dock 'Slack'
+add_app_to_dock '1Password 5'
+add_app_to_dock 'Atom'
+add_app_to_dock 'Mou'
+add_app_to_dock 'Utilities/Terminal'
+
+killall Dock # Need to restart dock for new icons to show up
+
 echo "Done! Installing GCC as a last step. This will take a few hours..."
 # This is out of order w/ the other brew installs because it takes forever
 brew install gcc
