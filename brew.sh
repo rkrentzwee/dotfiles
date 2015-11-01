@@ -58,5 +58,18 @@ brew install python
 pip install --upgrade pip setuptools
 brew linkapps python
 
+brew install caskroom/cask/brew-cask
+brew cask install google-chrome
+brew cask install dropbox
+brew cask install 1password # What we use to share passwords
+brew cask install alfred # Quickly access things
+brew cask install skype
+brew cask install google-hangouts
+brew cask install flux # Save your eyes
+brew cask install mou # Markdown parser
+brew cask install slack # Team communications
+brew cask install screenhero # Screen sharing
+brew cask install onyx # Deep config/cleaning for OS X
+
 # Remove outdated versions from the cellar.
 brew cleanup
