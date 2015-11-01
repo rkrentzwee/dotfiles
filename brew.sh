@@ -45,7 +45,7 @@ brew install openssl
 
 # Install other useful binaries.
 brew install git
-brew install hub
+brew install hub # For working with Github
 brew install xctool
 brew install appledoc
 brew install mobile-shell
@@ -70,6 +70,7 @@ brew cask install mou # Markdown parser
 brew cask install slack # Team communications
 brew cask install screenhero # Screen sharing
 brew cask install onyx # Deep config/cleaning for OS X
+brew cask install github-desktop # For working with Github via GUI
 
 # Remove outdated versions from the cellar.
 brew cleanup
