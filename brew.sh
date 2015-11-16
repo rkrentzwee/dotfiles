@@ -24,6 +24,8 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+brew link xz # Apparently needed somewhere in here?
+
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -33,6 +35,8 @@ sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
+
+brew link xz # Not sure where this should go, so we're going to run it a few times
 
 # Install GPG (for use with installing RVM)
 brew install gpg
@@ -46,6 +50,7 @@ brew install openssl
 # Install other useful binaries.
 brew install git
 brew install hub # For working with Github
+brew link hub
 brew install xctool
 brew install appledoc
 brew install mobile-shell
@@ -54,11 +59,12 @@ brew install sqlite
 
 # Various languages & compilers
 # GCC is installed at the end of the Converge setup to save time
+brew link gdbm # Brew says it needs this run before it can install
 brew install python
 pip install --upgrade pip setuptools
 brew linkapps python
 
-brew install caskroom/cask/brew-cask
+brew install caskroom/cask/brew-cask # Find more casks at http://caskroom.io/search
 brew cask install google-chrome
 brew cask install dropbox
 brew cask install 1password # What we use to share passwords
