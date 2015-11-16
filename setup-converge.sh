@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Open Chrome to all the relevant download windows
-open -a -g Google\ Chrome https://appleid.apple.com/account
-open -a -g Google\ Chrome https://converge-industries.slack.com/
-open -a -g Google\ Chrome https://github.com/fpillet/NSLogger/releases
-open -a -g Google\ Chrome https://pqrs.org/osx/karabiner/
+open -g -a Google\ Chrome https://appleid.apple.com/account
+open -g -a Google\ Chrome https://converge-industries.slack.com/
+open -g -a Google\ Chrome https://github.com/fpillet/NSLogger/releases
+open -g -a Google\ Chrome https://pqrs.org/osx/karabiner/
 
 mkdir -p ~/repositories
 mkdir -p ~/others-repositories
