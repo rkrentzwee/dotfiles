@@ -9,6 +9,7 @@ apm install highlight-selected
 apm install linter
 apm install linter-ruby
 apm install linter-scss-lint
+apm install linter-shellcheck
 apm install merge-conflicts
 apm install minimap
 apm install minimap-highlight-selected
