@@ -56,6 +56,7 @@ brew install appledoc
 brew install mobile-shell
 brew install automake
 brew install sqlite
+brew install shellcheck # static analysis of shell scripts
 
 # Various languages & compilers
 # GCC is installed at the end of the Converge setup to save time
