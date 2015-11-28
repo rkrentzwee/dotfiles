@@ -17,6 +17,14 @@
 
 ## Installation
 
+Before you can run the installation procedures you will need to boostrap yourself into having the following:
+
+ * An administrator account on the Mac you are installing into
+ * A way to log into github from the command line (ssh key, or password auth)
+ * A way to run git on the command line
+
+As of El Capitan, you will be prompted to download and install git via the command line tools package.
+
 ### The simple way...
 
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
