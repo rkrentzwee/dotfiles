@@ -23,7 +23,7 @@ Before you can run the installation procedures you will need to boostrap yoursel
  * A way to log into github from the command line (ssh key, or password auth)
  * A way to run git on the command line
 
-As of El Capitan, you will be prompted to download and install git via the command line tools package.
+As of El Capitan, you will be prompted to download and install git via the command line tools package or you can install the entire Xcode and command line tools suite at once. If you do the Xcode install now, you may be stuck waiting for a while while that download happens. If you wait for XCode and just choose the command line tools installation, you can start Xcode while brew is installing packages.
 
 ### The simple way...
 
