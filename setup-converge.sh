@@ -32,9 +32,9 @@ else
   echo "RVM not installed, installing RVM, Ruby & Cocoapods"
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   \curl -sSL https://get.rvm.io | bash -s stable --ruby --with-default-gems="cocoapods bundler"
-  source $HOME/.rvm/scripts/rvm # Get RVM into the console's environment - UNTESTED (based in installing on PWQ's machine)
-  rvm install ruby-2.2.1 # UNTESTED (based in installing on PWQ's machine)
-  rvm use ruby-2.2.1 # UNTESTED
+  source $HOME/.rvm/scripts/rvm # Get RVM into the console's environment
+  rvm install ruby-2.2.1
+  rvm use ruby-2.2.1 --default
 fi
 
 # Install & Setup Atom
