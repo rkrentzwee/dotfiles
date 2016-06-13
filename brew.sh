@@ -65,6 +65,11 @@ brew install python
 pip install --upgrade pip setuptools
 brew linkapps python
 
+# Flightboard binaries
+brew install libmagic
+brew install imagemagick
+brew install graphicsmagick
+
 brew install caskroom/cask/brew-cask # Find more casks at http://caskroom.io/search
 brew cask install google-chrome
 brew cask install dropbox
