@@ -15,9 +15,9 @@
 	* Few other colors are not that great (like during brew installation)
 * RVM does not properly install default gems or switch to stable RVM ruby install
 
-## Installation
+## Prereqs
 
-Before you can run the installation procedures you will need to boostrap yourself into having the following:
+Before you can run the installation procedures you will need to boostrap yourself into having the following (note, the instructions below  take you through these steps):
 
  * An administrator account on the Mac you are installing into
  * A way to log into github from the command line (ssh key, or password auth)
@@ -25,9 +25,15 @@ Before you can run the installation procedures you will need to boostrap yoursel
 
 As of El Capitan, you will be prompted to download and install git via the command line tools package or you can install the entire Xcode and command line tools suite at once. If you do the Xcode install now, you may be stuck waiting for a while while that download happens. If you wait for XCode and just choose the command line tools installation, you can start Xcode while brew is installing packages.
 
-### The simple way...
+## Installation & Setup
+
+1. Open Terminal and run `git`
+2. You will be prompted to install XCode Developer Tools, click Yes
+3. Now go to Github and install their version of git via DMG
 
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+
+The first time you run `brew.sh` you will likely need to accept the XCode Command Line Tools T&C, then re-run `brew.sh`
 
 ```bash
 git clone https://github.com/converge-co/dotfiles.git && cd dotfiles && source bootstrap.sh
@@ -35,7 +41,6 @@ sh ./.osx
 sh ./brew.sh
 sh ./setup-converge.sh
 ```
-(beware, the final step of setup-converge.sh installs GCC, which takes 1-2hrs to install)
 
 To update in the future, `cd` into your local `dotfiles` repository and then:
 
@@ -77,19 +82,3 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/mathiasbynens/dotfiles/fork) instead, though.
-
-### Sensible OS X defaults
-
-When setting up a new Mac, you may want to set some sensible OS X defaults:
-
-```bash
-./.osx
-```
-
-### Install Homebrew formulae
-
-When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
-
-```bash
-./brew.sh
-```
