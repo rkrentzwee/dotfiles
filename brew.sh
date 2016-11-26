@@ -78,7 +78,6 @@ brew cask install alfred # Quickly access things
 brew cask install skype
 brew cask install google-hangouts
 brew cask install flux # Save your eyes
-brew cask install mou # Markdown parser
 brew cask install slack # Team communications
 brew cask install screenhero # Screen sharing
 brew cask install onyx # Deep config/cleaning for OS X
