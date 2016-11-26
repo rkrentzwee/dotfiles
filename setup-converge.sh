@@ -65,7 +65,6 @@ add_app_to_dock 'Google Chrome'
 add_app_to_dock 'Slack'
 add_app_to_dock '1Password 6'
 add_app_to_dock 'Atom'
-add_app_to_dock 'Mou'
 add_app_to_dock 'Utilities/Terminal'
 
 killall Dock # Need to restart dock for new icons to show up
