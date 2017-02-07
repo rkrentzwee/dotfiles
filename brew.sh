@@ -57,6 +57,7 @@ brew install mobile-shell
 brew install automake
 brew install sqlite
 brew install shellcheck # static analysis of shell scripts
+brew install bash-completion
 
 # Various languages & compilers
 # GCC is installed at the end of the Converge setup to save time
@@ -80,8 +81,8 @@ brew cask install google-hangouts
 brew cask install flux # Save your eyes
 brew cask install slack # Team communications
 brew cask install screenhero # Screen sharing
-brew cask install onyx # Deep config/cleaning for OS X
 brew cask install github-desktop # For working with Github via GUI
+brew cask install dialpad # For phone calls
 
 # Remove outdated versions from the cellar.
 brew cleanup
