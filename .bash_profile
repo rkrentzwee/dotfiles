@@ -46,3 +46,6 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Increase the file open limit, also requires changes at MacOS system level (Google for your MacOS version, as this changes frequently)
+ulimit -n 65536 200000
