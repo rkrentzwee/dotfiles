@@ -2,9 +2,7 @@
 
 # Open Chrome to all the relevant download windows
 open -g -a Google\ Chrome https://appleid.apple.com/account
-open -g -a Google\ Chrome https://dialpad.com/download
 open -g -a Google\ Chrome https://github.com/fpillet/NSLogger/releases
-open -g -a Google\ Chrome https://pqrs.org/osx/karabiner/
 
 mkdir -p ~/repositories
 mkdir -p ~/others-repositories
@@ -33,8 +31,8 @@ else
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   \curl -sSL https://get.rvm.io | bash -s stable --ruby --with-default-gems="cocoapods bundler"
   source $HOME/.rvm/scripts/rvm # Get RVM into the console's environment
-  rvm install ruby-2.2.5
-  rvm use ruby-2.2.5 --default
+  rvm install ruby-2.2.7
+  rvm use ruby-2.2.7 --default
 fi
 
 # Install & Setup Atom
@@ -65,6 +63,7 @@ add_app_to_dock 'Google Chrome'
 add_app_to_dock 'Slack'
 add_app_to_dock '1Password 6'
 add_app_to_dock 'Atom'
+add_app_to_dock 'Dialpad'
 add_app_to_dock 'Utilities/Terminal'
 
 killall Dock # Need to restart dock for new icons to show up
