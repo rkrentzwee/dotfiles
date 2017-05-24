@@ -83,6 +83,7 @@ brew cask install slack # Team communications
 brew cask install screenhero # Screen sharing
 brew cask install github-desktop # For working with Github via GUI
 brew cask install dialpad # For phone calls
+brew cask install zoomus # For video conf
 
 # Remove outdated versions from the cellar.
 brew cleanup
