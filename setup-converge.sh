@@ -35,6 +35,9 @@ else
   rvm use ruby-2.2.7 --default
 fi
 
+# Tell RVM to stop bothering us
+rvm rvmrc warning ignore allGemfiles
+
 # Install & Setup Atom
 if [ -d /Applications/Atom.app ]
 then
