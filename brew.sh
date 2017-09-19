@@ -55,7 +55,6 @@ brew install xctool
 brew install appledoc
 brew install mobile-shell
 brew install automake
-brew install sqlite
 brew install shellcheck # static analysis of shell scripts
 brew install bash-completion
 
