@@ -2,6 +2,8 @@
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  lg = log --graph --decorate --oneline 
+  lga = log --graph --decorate --date=relative 
 
 	# View the current working tree status using the short format
 	s = status -s
@@ -84,7 +86,7 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 	
-	editor = atom
+	editor = vim
 
 [color]
 
