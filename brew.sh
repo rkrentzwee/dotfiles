@@ -64,11 +64,12 @@ brew link gdbm # Brew says it needs this run before it can install
 brew install python
 pip install --upgrade pip setuptools
 brew linkapps python
+brew install root 
 
 # Flightboard binaries
-brew install libmagic
-brew install imagemagick
-brew install graphicsmagick
+#brew install libmagic
+#brew install imagemagick
+#brew install graphicsmagick
 
 brew install caskroom/cask/brew-cask # Find more casks at http://caskroom.io/search
 brew cask install google-chrome
