@@ -48,6 +48,8 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+" Make tabs into spaces 
+set expandtab 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -104,3 +106,12 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+"" from previous files
+"" for text wrapping without line breaks
+"set wrap
+"set linebreak
+"set nolist  " list disables linebreak
+"set textwidth=0
+"set wrapmargin=0  
+
