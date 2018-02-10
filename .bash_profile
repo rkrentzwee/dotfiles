@@ -49,3 +49,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Increase the file open limit, also requires changes at MacOS system level (Google for your MacOS version, as this changes frequently)
 ulimit -n 65536 200000
+
+# source ROOT 
+. /usr/local/bin/thisroot.sh
+
