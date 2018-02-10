@@ -38,52 +38,55 @@ brew install findutils
 
 brew link xz # Not sure where this should go, so we're going to run it a few times
 
-# Install GPG (for use with installing RVM)
-brew install gpg
 
-# Install `wget` with IRI support.
-brew install wget --with-iri
-
-# Install OpenSSL
-brew install openssl
-
-# Install other useful binaries.
-brew install git
-brew install hub # For working with Github
-brew link hub
-brew install xctool
-brew install appledoc
-brew install mobile-shell
-brew install automake
-brew install shellcheck # static analysis of shell scripts
-brew install bash-completion
+#---------------------------------
+# Tools
+#---------------------------------
+brew install ack \
+             appledoc \
+             automake \
+             bash-completion \
+             cmake \
+             docker \
+             git \
+             hub \
+             xctool \
+             gpg \
+             macvim \
+             mas \
+             mobile-shell \
+             openssl \
+             rsync \
+             shellcheck \
+             wget --with-iri \
+             xquartz \
 
 # Various languages & compilers
-# GCC is installed at the end of the Converge setup to save time
 brew link gdbm # Brew says it needs this run before it can install
 brew install python
 pip install --upgrade pip setuptools
 brew linkapps python
 brew install root 
+#brew install gcc # note that gcc takes a long time to download  
 
-# Flightboard binaries
-#brew install libmagic
-#brew install imagemagick
-#brew install graphicsmagick
 
+#---------------------------------
+# Apps
+#---------------------------------
 brew install caskroom/cask/brew-cask # Find more casks at http://caskroom.io/search
-brew cask install google-chrome
-brew cask install dropbox
-brew cask install 1password # What we use to share passwords
-brew cask install alfred # Quickly access things
-brew cask install skype
-brew cask install google-hangouts
-brew cask install flux # Save your eyes
-brew cask install slack # Team communications
-brew cask install screenhero # Screen sharing
-brew cask install github-desktop # For working with Github via GUI
-brew cask install dialpad # For phone calls
-brew cask install zoomus # For video conf
+brew cask install atom \
+                  dropbox \
+                  dialpad \
+                  firefox \
+                  flux \
+                  github-desktop \
+                  google-chrome \
+                  mactex \
+                  slack \
+                  screenhero \
+                  skype \
+                  zoomus \
+                  1password 
 
 # Remove outdated versions from the cellar.
 brew cleanup
