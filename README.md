@@ -36,7 +36,7 @@ You can clone the repository wherever you want. (I like to keep it in `~/Project
 The first time you run `brew.sh` you will likely need to accept the XCode Command Line Tools T&C, then re-run `brew.sh`
 
 ```bash
-git clone https://github.com/converge-co/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone https://github.com/rkrentzwee/dotfiles.git && cd dotfiles && source bootstrap.sh
 sh ./.osx
 sh ./brew.sh
 sh ./setup-converge.sh
