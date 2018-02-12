@@ -24,8 +24,6 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-brew link xz # Apparently needed somewhere in here?
-
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -43,7 +41,6 @@ brew link xz # Not sure where this should go, so we're going to run it a few tim
 # Tools
 #---------------------------------
 brew install ack \
-             appledoc \
              automake \
              bash-completion \
              cmake \
@@ -58,35 +55,33 @@ brew install ack \
              openssl \
              rsync \
              shellcheck \
-             wget --with-iri \
-             xquartz \
+             wget \
 
 # Various languages & compilers
 brew link gdbm # Brew says it needs this run before it can install
+brew install gcc # note that gcc takes a long time to download  
 brew install python
-pip install --upgrade pip setuptools
+pip2 install --upgrade pip setuptools
 brew linkapps python
 brew install root 
-#brew install gcc # note that gcc takes a long time to download  
 
 
 #---------------------------------
 # Apps
 #---------------------------------
-brew install caskroom/cask/brew-cask # Find more casks at http://caskroom.io/search
+#brew tap caskroom/cask # Find more casks at http://caskroom.github.io/search
 brew cask install atom \
                   dropbox \
-                  dialpad \
                   firefox \
                   flux \
-                  github-desktop \
                   google-chrome \
                   mactex \
                   slack \
-                  screenhero \
                   skype \
+                  telegram \
                   zoomus \
                   1password 
+                  xquartz \
 
 # Remove outdated versions from the cellar.
 brew cleanup
