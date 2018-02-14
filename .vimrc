@@ -109,9 +109,9 @@ endif
 
 "" from previous files
 "" for text wrapping without line breaks
-"set wrap
-"set linebreak
+set wrap
+set linebreak
 "set nolist  " list disables linebreak
-"set textwidth=0
-"set wrapmargin=0  
+set textwidth=0
+set wrapmargin=0  
 
