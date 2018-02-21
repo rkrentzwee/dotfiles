@@ -15,3 +15,18 @@ Thumbs.db
 
 # File with name/email settings
 .extra
+
+# Editor cruft
+*.swp
+*.*~
+
+# LaTeX cruft 
+*.bbl 
+*.blg
+*.log 
+*.pdf
+*.aux  
+
+# Mac things 
+.DS_Store
+ 
